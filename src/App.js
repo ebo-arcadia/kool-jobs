@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
+import { Counter } from "./features/counter";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           Go to source code
         </a>
       </header>
+      <Counter />
     </div>
   );
 }
