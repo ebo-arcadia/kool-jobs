@@ -5,13 +5,16 @@ const Search = (props) => {
   const [state, setState] = useState({
     description: "",
     location: "",
-    full_time: false,
+    remote_job_only: false,
   });
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    if (name === "full_time") {
-      setState((prevState) => ({ ...state, [name]: !prevState.full_time }));
+    if (name === "remote_only") {
+      setState((prevState) => ({
+        ...state,
+        [name]: !prevState.remote_job_only,
+      }));
     } else {
       setState({ ...state, [name]: value });
     }
@@ -55,13 +58,13 @@ const Search = (props) => {
           </Col>
         </Row>
         <div className="filters">
-          <Form.Group controlId="full_time">
+          <Form.Group controlId="remote_job_only">
             <Form.Check
               type="checkbox"
-              name="full_time"
-              className="full-time-checkbox"
-              label="Full time only"
-              checked={state.full_time}
+              name="remote_job_only"
+              className="remote-only-checkbox"
+              label="Remote job only"
+              checked={state.remote_job_only}
               onChange={handleInputChange}
             />
           </Form.Group>
