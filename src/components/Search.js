@@ -35,7 +35,7 @@ const Search = (props) => {
                 type="text"
                 name="description"
                 value={state.description || ""}
-                placeholder="Enter search term"
+                placeholder="e.g. Tech Lead"
                 onChange={handleInputChange}
               />
             </Form.Group>
@@ -46,7 +46,7 @@ const Search = (props) => {
                 type="text"
                 name="location"
                 value={state.location || ""}
-                placeholder="Enter location"
+                placeholder="Where?"
                 onChange={handleInputChange}
               />
             </Form.Group>
