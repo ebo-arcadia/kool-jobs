@@ -63,7 +63,7 @@ const Search = (props) => {
               type="checkbox"
               name="remote_job_only"
               className="remote-only-checkbox"
-              label="Remote job only"
+              label="Remote jobs only"
               checked={state.remote_job_only}
               onChange={handleInputChange}
             />
