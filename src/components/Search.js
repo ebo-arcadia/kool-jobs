@@ -23,6 +23,7 @@ const Search = (props) => {
   const handleSearch = (event) => {
     event.preventDefault();
     console.log(state);
+    props.onSearch(state);
   };
 
   return (
