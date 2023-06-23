@@ -27,7 +27,7 @@ app.get("/jobs", async (req, res) => {
       page = isNaN(page) ? "" : `&page=${page}`;
     }
 
-    const query = `https://jobs.github.com/positions.json?description=${description}&location=${location}${remote_jobs_only}${page}`;
+    const query = `https://jsearch.p.rapidapi.com/search?description=${description}&location=${location}${remote_jobs_only}${page}`;
     const result = await axios.get(query);
     res.send(result.data);
   } catch (error) {
